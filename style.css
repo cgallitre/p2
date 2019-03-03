@@ -1,0 +1,101 @@
+/*
+Theme Name: Sydney Child
+Theme URI: http://athemes.com/theme/sydney
+Author: aThemes - Cyril Gallitre
+Author URI: http://athemes.com
+Template: sydney
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sydney
+*/
+
+
+/* Partie commune - Mobile first */
+
+/* Suppression des titres de la page d'accueil */
+.page-id-6 .hentry .entry-header { display: none; }
+
+/* suppression de pre-loader */
+.preloader { display: none; }
+
+/* Lien Accueil du menu principal - icône home */
+/* #menu-menu-principal li:first-child::before {
+    content: "\f015";
+    font-family: FontAwesome;
+    font-size:1.1em;
+}
+*/
+
+/* Alignement des liens sur ancre 
+#discover:before {
+    content: "";
+    display:block;
+    height:40px;
+    margin: -40px 0 0;
+}
+*/
+
+/* Boutons */
+.roll-button:hover{
+    background-color: #fff;
+}
+
+/* Blocs de la page d'accueil */
+#home-blocs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: top;
+}
+
+#home-blocs h4, #home-blocs p{
+    text-align:center;
+}
+
+.one-bloc{
+    width:270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 0 40px 0;
+}
+
+/* Sections */
+h2{
+    text-align: center;
+}
+
+hr{
+    border-bottom: solid 3px #737971;
+    width:10%;
+    margin-top:-10px;
+    margin-bottom: 40px;
+}
+
+section{
+    padding:50px 0 0 0;
+}
+
+
+/* bannières des pages internes */
+.header-image .overlay {opacity:0.1; }
+
+
+/* Pour desktop */
+
+@media screen and (min-width: 1025px) {
+
+    /* Alignement des liens sur ancre */
+    #discover:before {
+        content: "";
+        display:block;
+        height:60px;
+        margin: -60px 0 0;
+    }
+
+    /* bannières des pages internes */
+    .header-image .overlay {opacity:0.4; }
+    
+}
