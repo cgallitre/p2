@@ -19,22 +19,8 @@ Text Domain: sydney
 /* suppression de pre-loader */
 .preloader { display: none; }
 
-/* Lien Accueil du menu principal - icône home */
-/* #menu-menu-principal li:first-child::before {
-    content: "\f015";
-    font-family: FontAwesome;
-    font-size:1.1em;
-}
-*/
-
-/* Alignement des liens sur ancre 
-#discover:before {
-    content: "";
-    display:block;
-    height:40px;
-    margin: -40px 0 0;
-}
-*/
+/* Suppression footer WP */
+#colophon {display:none;}
 
 /* Boutons */
 .roll-button:hover{
@@ -62,10 +48,18 @@ Text Domain: sydney
     padding:0 0 40px 0;
 }
 
-/* Sections */
-h2{
+.meta-post {
     text-align: center;
 }
+
+/* Suppression auteur des posts */ 
+.entry-header .byline { display: none; }
+
+/* Sections */
+h1, h2{
+    text-align: center;
+}
+
 
 hr{
     border-bottom: solid 3px #737971;
@@ -80,22 +74,33 @@ section{
 
 
 /* bannières des pages internes */
-.header-image .overlay {opacity:0.1; }
+.header-image .overlay {opacity:0; }
+
+
+/* Titres Pages secondaires */
+.entry-header .title-post {
+    font-size : 52px;
+    margin-top: 50px;
+}
+
+/* Titre plus d'infos */
+h1 {margin-top: 50px;}
 
 
 /* Pour desktop */
-
 @media screen and (min-width: 1025px) {
 
     /* Alignement des liens sur ancre */
     #discover:before {
         content: "";
         display:block;
-        height:60px;
-        margin: -60px 0 0;
+        height:100px;
+        margin: -100px 0 0;
     }
 
     /* bannières des pages internes */
-    .header-image .overlay {opacity:0.4; }
+    .header-image .overlay {opacity:0.5; }
+
+    section{ padding:100px 0 0 0; }
     
 }

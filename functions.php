@@ -17,3 +17,28 @@ function sydney_child_enqueue() {
 }
 
 /* ADD YOUR CUSTOM FUNCTIONS BELOW */
+
+// Custom Post Type : Activités (menu Plus d'info)
+function activities_register_post_types() {
+    $labels = array(
+        'name' => 'Activités',
+        'all_items' => 'Toutes les activités',
+        'singular_name' => 'Activity',
+        'add_new_item' => 'Ajouter une activité',
+        'edit_item' => 'Modifier une activité',
+        'menu_name' => 'Activités'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail', 'custom-fields' ),
+        'menu_position' => 3, 
+        'menu_icon' => 'dashicons-admin-customizer',
+	);
+
+	register_post_type( 'activites', $args );
+}
+add_action( 'init', 'activities_register_post_types' );
