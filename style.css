@@ -1,33 +1,39 @@
 /*
 Theme Name: Sydney Child
-Theme URI: http://athemes.com/theme/sydney
 Author: aThemes - Cyril Gallitre
-Author URI: http://athemes.com
 Template: sydney
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sydney
 */
 
-
-/* Partie commune - Mobile first */
+/* --------------------------------- Partie commune - Mobile --------------------------------- */
 
 /* Suppression des titres de la page d'accueil */
-.page-id-6 .hentry .entry-header { display: none; }
+
+.page-id-6 .hentry .entry-header {
+    display: none;
+}
 
 /* suppression de pre-loader */
-.preloader { display: none; }
+
+.preloader {
+    display: none;
+}
 
 /* Suppression footer WP */
-#colophon {display:none;}
+
+#colophon {
+    display: none;
+}
 
 /* Boutons */
-.roll-button:hover{
+
+.roll-button:hover {
     background-color: #fff;
 }
 
 /* Blocs de la page d'accueil */
+
 #home-blocs {
     display: flex;
     flex-wrap: wrap;
@@ -35,72 +41,191 @@ Text Domain: sydney
     align-items: top;
 }
 
-#home-blocs h4, #home-blocs p{
-    text-align:center;
+#home-blocs h4,
+#home-blocs p {
+    text-align: center;
 }
 
-.one-bloc{
-    width:270px;
+.one-bloc {
+    width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding:0 0 40px 0;
+    padding: 0 0 40px 0;
 }
 
 .meta-post {
     text-align: center;
 }
 
-/* Suppression auteur des posts */ 
-.entry-header .byline { display: none; }
+/* Suppression auteur des posts */
+
+.entry-header .byline {
+    display: none;
+}
 
 /* Sections */
-h1, h2{
+
+h1,
+h2 {
     text-align: center;
 }
 
-
-hr{
+hr {
     border-bottom: solid 3px #737971;
-    width:10%;
-    margin-top:-10px;
+    width: 10%;
+    margin-top: -10px;
     margin-bottom: 40px;
 }
 
-section{
-    padding:50px 0 0 0;
+section {
+    padding: 50px 0 0 0;
 }
 
+/* --------------------------------- Pages internes --------------------------------- */
 
 /* bannières des pages internes */
-.header-image .overlay {opacity:0; }
 
+.header-image .overlay {
+    opacity: 0;
+}
 
 /* Titres Pages secondaires */
-.entry-header .title-post {
-    font-size : 52px;
+
+.hentry .title-post {
+    font-size: 52px;
     margin-top: 50px;
 }
 
+.entry-header .title-activity {
+    font-size: 32px;
+}
+
 /* Titre plus d'infos */
-h1 {margin-top: 50px;}
+
+h1 {
+    margin-top: 50px;
+}
+
+/* Centrage formulaire Recherche */
+
+#search-box {
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------------------------- Page Activités du mois ---------------------------------*/
 
 
-/* Pour desktop */
-@media screen and (min-width: 1025px) {
+.entry-thumb h3 {
+    font-size: 30px;
+}
 
+/* Bouton de recherche */
+
+div.css-search div.em-search-main .em-search-submit {
+    background-color: #F81E36;
+    background: -moz-linear-gradient( center top, #F81E36 5%, #F81E36 100%);
+}
+
+div.css-search div.em-search-main .em-search-submit:hover {
+    background: -moz-linear-gradient( center top, #fcaaaa 5%, #fcaaaa 100%);
+}
+
+/* Tableau liste des activités */
+
+.one-activity:hover {
+    background-color: #fcaaaa;
+}
+
+tr:nth-child(even) {
+    background-color: #EBEBEB;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+td {
+    display: block;
+    width: 100%;
+    border : 0;
+    margin-bottom: 15px;
+}
+
+tr { 
+    border: 1px solid;
+}
+
+th {
+    display: none;
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+/* Bouton inscription */
+
+.one-activity .roll-button {
+    padding: 10px 18px 10px 18px;
+}
+
+/* Champ Recherche */
+
+.em-search-wrapper {
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+
+/* --------------------------------- Pour desktop et tablette --------------------------------- */
+
+@media screen and (min-width: 768px) {
     /* Alignement des liens sur ancre */
     #discover:before {
         content: "";
-        display:block;
-        height:100px;
+        display: block;
+        height: 100px;
         margin: -100px 0 0;
     }
-
     /* bannières des pages internes */
-    .header-image .overlay {opacity:0.5; }
-
-    section{ padding:100px 0 0 0; }
-    
+    .header-image .overlay {
+        opacity: 0.5;
+    }
+    section {
+        padding: 100px 0 0 0;
+    }
+    /* Marge sur formulaire de recherche */
+    #search-box {
+        margin-bottom: 200px;
+    }
+    /* Tableau d'activités */
+    th {
+        display: table-cell;
+    }
+    td {
+        display: table-cell;
+        border: 1px solid;
+    }
+    td:nth-child(1) {
+        width: 15%;
+    }
+    td:nth-child(2) {
+        width: 15%;
+    }
+    td:nth-child(3) {
+        width: 50%;
+    }
+    td:nth-child(4) {
+        width: 20%;
+    }
+    .css-events-list table.events-table td {
+        padding: 5px 5px 0 5px;
+    }
+    /* Champ Recherche */
+    .em-search-wrapper {
+        width: 50%;
+        margin: 0 auto 50px auto;
+    }
 }
