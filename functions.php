@@ -18,7 +18,7 @@ function sydney_child_enqueue() {
 
 /* ADD YOUR CUSTOM FUNCTIONS BELOW */
 
-// Custom Post Type : Activités (menu Plus d'info)
+// Custom Post Type : Actualités (menu Plus d'info)
 function activities_register_post_types() {
     $labels = array(
         'name' => 'Activités',
@@ -42,3 +42,30 @@ function activities_register_post_types() {
 	register_post_type( 'activites', $args );
 }
 add_action( 'init', 'activities_register_post_types' );
+
+// Custom Post Type : Actualités (menu Actualités)
+/* function news_register_post_types() {
+    $labels = array(
+        'name' => 'Actualités',
+        'all_items' => 'Toutes les Actualités',
+        'singular_name' => 'News',
+        'add_new_item' => 'Ajouter une actualité',
+        'edit_item' => 'Modifier une actualité',
+        'menu_name' => 'Actualités'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail', 'custom-fields' ),
+        'menu_position' => 3, 
+        'menu_icon' => 'dashicons-admin-customizer',
+	);
+
+	register_post_type( 'news', $args );
+}
+add_action( 'init', 'news_register_post_types' );
+
+*/

@@ -55,14 +55,15 @@ Text Domain: sydney
     padding: 0 0 40px 0;
 }
 
-.meta-post {
-    text-align: center;
+.on-bloc-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Suppression auteur des posts */
-
-.entry-header .byline {
-    display: none;
+.meta-post {
+    text-align: center;
 }
 
 /* Sections */
@@ -115,6 +116,13 @@ h1 {
     justify-content: center;
 }
 
+/* Toutes les actualités */
+.wpsp-read-more{
+    display: block;
+    text-align: right;
+}
+
+
 /* --------------------------------- Page Activités du mois ---------------------------------*/
 
 
@@ -125,15 +133,18 @@ h1 {
 /* Bouton de recherche */
 
 div.css-search div.em-search-main .em-search-submit {
-    background-color: #F81E36;
-    background: -moz-linear-gradient( center top, #F81E36 5%, #F81E36 100%);
+    background-color: #e74c3c;
+    background: -moz-linear-gradient( center top, #e74c3c 5%, #e74c3c 100%);
 }
 
 div.css-search div.em-search-main .em-search-submit:hover {
     background: -moz-linear-gradient( center top, #fcaaaa 5%, #fcaaaa 100%);
 }
 
-/* Tableau liste des activités */
+/* Tableau liste des activités / Événements */
+th{
+    display:none;
+}
 
 .one-activity:hover {
     background-color: #fcaaaa;
@@ -150,20 +161,34 @@ tr:nth-child(odd) {
 td {
     display: block;
     width: 100%;
-    border : 0;
     margin-bottom: 15px;
 }
 
 tr { 
     border: 1px solid;
+    cursor: pointer;
 }
 
-th {
-    display: none;
+.css-events-list table.events-table .inscription-button{
+    padding-bottom: 20px;
 }
 
 table {
     margin-bottom: 50px;
+}
+
+.name-event {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.css-events-list table.events-table td {
+    padding: 5px 5px 5px 5px;
+    margin: 0 0 0 0;
+    border: 0;
+}
+.css-events-list table.events-table p {
+    margin-bottom: 5px;
 }
 
 /* Bouton inscription */
@@ -172,12 +197,23 @@ table {
     padding: 10px 18px 10px 18px;
 }
 
+.single .single-meta{
+    display:flex;
+    justify-content: center;
+}
+
 /* Champ Recherche */
 
 .em-search-wrapper {
     width: 90%;
     margin: 0 auto 50px auto;
 }
+
+/* Footer */
+.contact-address, .contact-phone{
+    display: flex;
+}
+
 
 /* --------------------------------- Pour desktop et tablette --------------------------------- */
 
@@ -201,28 +237,45 @@ table {
         margin-bottom: 200px;
     }
     /* Tableau d'activités */
-    th {
+
+
+    td, th {
         display: table-cell;
-    }
-    td {
-        display: table-cell;
-        border: 1px solid;
     }
     td:nth-child(1) {
-        width: 15%;
+        width: 9%;
     }
     td:nth-child(2) {
         width: 15%;
     }
     td:nth-child(3) {
-        width: 50%;
+        width: 56%;
     }
     td:nth-child(4) {
         width: 20%;
     }
+
     .css-events-list table.events-table td {
-        padding: 5px 5px 0 5px;
+        padding: 0 5px 0 5px;
+        border: 1px solid;
     }
+
+    .css-events-list table.events-table .inscription-button{
+        padding-bottom: 0;
+    }
+
+    .entry-thumb img{
+        max-width:400px;
+        float: left;
+        padding: 0 20px 0 0;
+    }
+
+    .entry-content h3 {
+        clear:both;
+        padding-top : 40px;
+    }
+
+
     /* Champ Recherche */
     .em-search-wrapper {
         width: 50%;
