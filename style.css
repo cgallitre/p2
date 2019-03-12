@@ -14,6 +14,11 @@ Text Domain: sydney
     display: none;
 }
 
+#text-home {
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+
 /* suppression de pre-loader */
 
 .preloader {
@@ -27,10 +32,51 @@ Text Domain: sydney
 }
 
 /* Boutons */
-
 .roll-button:hover {
     background-color: #fff;
 }
+
+
+/* Animations des boutons */
+
+@keyframes animate-buttons {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    40% {
+        transform: rotate(-10deg)
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg)
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* On applique l'animation sur les boutons */
+
+.roll-button:hover {
+    animation: animate-buttons 0.5s;
+}
+
+
+
+
+
+
+
 
 /* Blocs de la page d'accueil */
 
@@ -146,6 +192,12 @@ th{
     display:none;
 }
 
+/* Pour la transition lorsque l'on se place sur une ligne du tableau*/
+.one-activity{
+    transition-property: background-color;
+    transition-duration: 0.8s
+}
+
 .one-activity:hover {
     background-color: #fcaaaa;
 }
@@ -202,18 +254,23 @@ table {
     justify-content: center;
 }
 
-/* Champ Recherche */
+/* --------------------------------- Contact --------------------------------- */
+.form-contact {
+    max-width: 500px;
+    margin:auto;
+}
+
+/* --------------------------------- Recherche --------------------------------- */
 
 .em-search-wrapper {
     width: 90%;
     margin: 0 auto 50px auto;
 }
 
-/* Footer */
+/* --------------------------------- Footer --------------------------------- */
 .contact-address, .contact-phone{
     display: flex;
 }
-
 
 /* --------------------------------- Pour desktop et tablette --------------------------------- */
 
@@ -225,19 +282,21 @@ table {
         height: 100px;
         margin: -100px 0 0;
     }
+
     /* bannières des pages internes */
     .header-image .overlay {
         opacity: 0.5;
     }
     section {
-        padding: 100px 0 0 0;
+        padding: 50px 0 0 0;
     }
+
+   
     /* Marge sur formulaire de recherche */
     #search-box {
         margin-bottom: 200px;
     }
     /* Tableau d'activités */
-
 
     td, th {
         display: table-cell;
@@ -246,13 +305,13 @@ table {
         width: 9%;
     }
     td:nth-child(2) {
-        width: 15%;
+        width: 20%;
     }
     td:nth-child(3) {
         width: 56%;
     }
     td:nth-child(4) {
-        width: 20%;
+        width: 15%;
     }
 
     .css-events-list table.events-table td {
@@ -263,12 +322,7 @@ table {
     .css-events-list table.events-table .inscription-button{
         padding-bottom: 0;
     }
-
-    .entry-thumb img{
-        max-width:400px;
-        float: left;
-        padding: 0 20px 0 0;
-    }
+   
 
     .entry-content h3 {
         clear:both;

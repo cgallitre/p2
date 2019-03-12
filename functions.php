@@ -34,7 +34,7 @@ function activities_register_post_types() {
         'public' => true,
         'show_in_rest' => true,
         'has_archive' => true,
-        'supports' => array( 'title', 'editor','thumbnail', 'custom-fields' ),
+        'supports' => array( 'title', 'editor','thumbnail', 'custom-fields', 'excerpt' ),
         'menu_position' => 3, 
         'menu_icon' => 'dashicons-admin-customizer',
 	);
