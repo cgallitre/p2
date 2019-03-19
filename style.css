@@ -14,7 +14,7 @@ Text Domain: sydney
     display: none;
 }
 
-#text-home {
+.text-home {
     text-align: center;
     padding: 20px 0 30px 0;
 }
@@ -30,6 +30,12 @@ Text Domain: sydney
 #colophon {
     display: none;
 }
+
+/* Menu principal en haut à droite */
+#mainnav li:hover {
+    background-color: rgba(255,255,255, 0.4)
+}
+
 
 /* Boutons */
 .roll-button:hover {
@@ -66,15 +72,9 @@ Text Domain: sydney
 }
 
 /* On applique l'animation sur les boutons */
-
 .roll-button:hover {
     animation: animate-buttons 0.5s;
 }
-
-
-
-
-
 
 
 
@@ -101,7 +101,7 @@ Text Domain: sydney
     padding: 0 0 40px 0;
 }
 
-.on-bloc-title{
+.on-bloc-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,13 +157,28 @@ h1 {
 
 /* Centrage formulaire Recherche */
 
-#search-box {
+#search-box .search-form{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
 }
 
+/* Bouton formulaire recherche */
+#search-box .search-submit {
+    width: 200px;
+    margin:auto;
+}
+
+/* Texte formulaire recherche */ 
+#search-text {
+    max-width: 800px;
+    text-align: center;
+    margin:0 auto 40px auto;
+}
+
+
 /* Toutes les actualités */
-.wpsp-read-more{
+.wpsp-read-more {
     display: block;
     text-align: right;
 }
@@ -179,21 +194,20 @@ h1 {
 /* Bouton de recherche */
 
 div.css-search div.em-search-main .em-search-submit {
-    background-color: #e74c3c;
-    background: -moz-linear-gradient( center top, #e74c3c 5%, #e74c3c 100%);
+    background: #e74c3c;
 }
 
 div.css-search div.em-search-main .em-search-submit:hover {
-    background: -moz-linear-gradient( center top, #fcaaaa 5%, #fcaaaa 100%);
+    background: #e74c3c;
 }
 
 /* Tableau liste des activités / Événements */
-th{
-    display:none;
+th {
+    display: none;
 }
 
 /* Pour la transition lorsque l'on se place sur une ligne du tableau*/
-.one-activity{
+.one-activity {
     transition-property: background-color;
     transition-duration: 0.8s
 }
@@ -216,12 +230,12 @@ td {
     margin-bottom: 15px;
 }
 
-tr { 
+tr {
     border: 1px solid;
     cursor: pointer;
 }
 
-.css-events-list table.events-table .inscription-button{
+.css-events-list table.events-table .inscription-button {
     padding-bottom: 20px;
 }
 
@@ -239,6 +253,7 @@ table {
     margin: 0 0 0 0;
     border: 0;
 }
+
 .css-events-list table.events-table p {
     margin-bottom: 5px;
 }
@@ -249,15 +264,31 @@ table {
     padding: 10px 18px 10px 18px;
 }
 
-.single .single-meta{
-    display:flex;
+.single .single-meta {
+    display: flex;
     justify-content: center;
 }
+
+/* Formulaire de réservations */
+#booking-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.em-booking textarea, .em-booking input { width:340px !important;}
+
+.em-ticket-select{height:35px;}
+
+.em-booking-form-details .em-booking-submit {width:340px;}
+
+
 
 /* --------------------------------- Contact --------------------------------- */
 .form-contact {
     max-width: 500px;
-    margin:auto;
+    margin: auto;
 }
 
 /* --------------------------------- Recherche --------------------------------- */
@@ -268,13 +299,15 @@ table {
 }
 
 /* --------------------------------- Footer --------------------------------- */
-.contact-address, .contact-phone{
+.contact-address,
+.contact-phone {
     display: flex;
 }
 
 /* --------------------------------- Pour desktop et tablette --------------------------------- */
 
 @media screen and (min-width: 768px) {
+
     /* Alignement des liens sur ancre */
     #discover:before {
         content: "";
@@ -287,29 +320,36 @@ table {
     .header-image .overlay {
         opacity: 0.5;
     }
+
     section {
         padding: 50px 0 0 0;
     }
 
-   
     /* Marge sur formulaire de recherche */
     #search-box {
         margin-bottom: 200px;
     }
+   
+
     /* Tableau d'activités */
 
-    td, th {
+    td,
+    th {
         display: table-cell;
     }
+
     td:nth-child(1) {
         width: 9%;
     }
+
     td:nth-child(2) {
         width: 20%;
     }
+
     td:nth-child(3) {
         width: 56%;
     }
+
     td:nth-child(4) {
         width: 15%;
     }
@@ -319,18 +359,22 @@ table {
         border: 1px solid;
     }
 
-    .css-events-list table.events-table .inscription-button{
+    .css-events-list table.events-table .inscription-button {
         padding-bottom: 0;
     }
-   
+
 
     .entry-content h3 {
-        clear:both;
-        padding-top : 40px;
+        clear: both;
+        padding-top: 40px;
+    }
+
+    .entry-content h4 {
+        text-align: center;
     }
 
 
-    /* Champ Recherche */
+    /* Champ Recherche Activités du mois */
     .em-search-wrapper {
         width: 50%;
         margin: 0 auto 50px auto;

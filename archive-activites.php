@@ -27,7 +27,7 @@ $layout = sydney_blog_layout();
 				<?php
 					// the_archive_title( '<h3 class="archive-title">', '</h3>' );
 					// the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					echo('<h1 class="title-post entry-title">Les incontournables d\'Alsace</h1>');
+					echo('<h1 class="title-post entry-title">Plus d\'infos</h1>');
 				?>
 			</header><!-- .page-header -->
 
